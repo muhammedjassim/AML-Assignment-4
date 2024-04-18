@@ -1,0 +1,10 @@
+pytest test.py
+
+# Check the exit code of the pytest command
+if [ $? -ne 0 ]; then
+    echo "Tests failed. Please fix the issues before committing."
+    exit 1
+fi
+
+# If the tests pass, allow the commit to proceed
+exit 0
